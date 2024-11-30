@@ -1,3 +1,0 @@
-.input-email[aria-invalid="true"] ~ .invalid-feedback {
-    display: flex;
-}

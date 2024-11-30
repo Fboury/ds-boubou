@@ -1,1 +1,0 @@
-{"version":3,"file":"constantes.js","sourceRoot":"","sources":["../../../src/form/InputPhone/constantes.ts"],"names":[],"mappings":";;;AAEa,QAAA,gBAAgB,GAAG,EAAE,CAAC;AACtB,QAAA,8BAA8B,GAAG,EAAE,CAAC;AAEpC,QAAA,WAAW,GAAG,yBAAyB,CAAC;AACxC,QAAA,2BAA2B,GAAG,KAAK,CAAC;AACpC,QAAA,uBAAuB,GAAG,SAAS,CAAC;AAEpC,QAAA,mBAAmB,GAAuB;IACrD,OAAO,EAAE,+EAA+E;IACxF,QAAQ,EAAE,gDAAgD;CAC3D,CAAC"}

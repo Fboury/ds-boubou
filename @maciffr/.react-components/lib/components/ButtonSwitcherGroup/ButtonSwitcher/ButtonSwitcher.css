@@ -1,4 +1,0 @@
-.switcher-focus:has(input:focus) {
-  border-color: #0073be;
-  box-shadow: 0 0 0 0.125rem rgba(0, 115, 190, 0.25);
-}
