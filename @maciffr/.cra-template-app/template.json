@@ -1,0 +1,71 @@
+{
+  "package": {
+    "private": false,
+    "main": "./src/App.tsx",
+    "scripts": {
+      "prepare": "husky install",
+      "test:coverage": "npm run test -- --coverage --ci --testResultsProcessor=\"jest-sonar-reporter\" --reporters=default --reporters=\"jest-junit\"",
+      "test:coverage:ci": "npm run test:coverage",
+      "storybook": "storybook dev -p 6006",
+      "build-storybook": "storybook build"
+    },
+    "overrides": {
+      "react-refresh": "0.14.0"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.3.0",
+      "react-scripts": "5.0.1"
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^17.0.3",
+      "@commitlint/config-conventional": "^17.0.3",
+      "@maciffr/http-client": "1.7.51",
+      "@maciffr/react-components": "1.7.51",
+      "@maciffr/react-mvc": "1.7.51",
+      "@maciffr/react-navigation": "1.7.51",
+      "@maciffr/storybook": "1.7.51",
+      "@mdx-js/react": "^2.1.1",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^14.0.0",
+      "@testing-library/user-event": "^14.4.3",
+      "@types/jest": "^29.5.0",
+      "@types/node": "^16.11.36",
+      "@types/react": "^18.0.28",
+      "@types/react-dom": "^18.0.11",
+      "babel-plugin-named-exports-order": "^0.0.2",
+      "husky": "^8.0.1",
+      "jest-environment-jsdom": "^29.0.1",
+      "jest-junit": "^15.0.0",
+      "jest-sonar-reporter": "^2.0.0",
+      "typescript": "^5.1.6",
+      "web-vitals": "^2.1.0",
+      "webpack": "^5.74.0"
+    },
+    "jest": {
+      "transformIgnorePatterns": [
+        "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+      ]
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ],
+      "overrides": [
+        {
+          "files": [
+            "**/*.stories.*"
+          ],
+          "rules": {
+            "import/no-anonymous-default-export": "off"
+          }
+        }
+      ]
+    },
+    "engines": {
+      "node": ">=18"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@maciffr/react-mvc",
+  "version": "1.7.51",
+  "description": "composants de base de l'architecture utilisé chez Macif",
+  "scripts": {
+    "clean-build": "rm -rf ./lib",
+    "clean-test": "rm -rf ./coverage",
+    "clean-dep": "rm -rf ./node_modules",
+    "clean": "npm run clean-build & npm run clean-test & npm run clean-dep",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/**/*.css lib/",
+    "test": "jest",
+    "test:coverage": "npm run test -- --coverage --ci --testResultsProcessor=\"jest-sonar-reporter\" --reporters=default --reporters=\"jest-junit\" --silent --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.macif.fr:82/btoc-sites.libs.utils/fmw-react.git",
+    "directory": "maciffr-react-mvc"
+  },
+  "keywords": [
+    "react",
+    "mvc",
+    "macif"
+  ],
+  "bugs": {
+    "url": "http://gitlab.macif.fr:82/btoc-sites.libs.utils/fmw-react/issues"
+  },
+  "author": "Antoine Jouan",
+  "devDependencies": {
+    "@maciffr/react": "^1.7.51",
+    "copyfiles": "^2.4.1"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "**/src/**/*.ts"
+    ]
+  },
+  "exports": {
+    "./*": "./lib/*.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "lib/*"
+      ]
+    }
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ]
+}

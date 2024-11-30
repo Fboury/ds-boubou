@@ -1,0 +1,77 @@
+@import "../../style/variables.css";
+
+.dsb-input-cell:has(input:not(input[type=checkbox])):has(input:not([readonly])), .dsb-input-cell:has(:not(input[type=radio])):has(input:not([readonly])) {
+    background-color: var(--color-white);
+}
+
+.dsb-input-cell {
+    width: 300px;
+    position: relative;
+    height: 44px;
+    display: inline-flex
+}
+
+@media(min-width: 56.25em) {
+    .dsb-input-cell {
+        height:52px
+    }
+}
+
+
+.dsb-input-cell:has(input:not(input[type=checkbox])),.dsb-input-cell:has(:not(input[type=radio])) {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    outline: solid 1.1px var(--color-grey--50);
+    outline-offset: -1.1px
+}
+
+.dsb-input-cell:has(input:not(input[type=checkbox])):has(input[aria-invalid=true]),.dsb-input-cell:has(input:not(input[type=checkbox])):has(input:focus-visible[aria-invalid=true]),.dsb-input-cell:has(:not(input[type=radio])):has(input[aria-invalid=true]),.dsb-input-cell:has(:not(input[type=radio])):has(input:focus-visible[aria-invalid=true]) {
+    outline-color: var(--color-use--5)
+}
+
+.dsb-input-cell:has(input:not(input[type=checkbox])):has(input:not([disabled]):hover),.dsb-input-cell:has(:not(input[type=radio])):has(input:not([disabled]):hover) {
+    outline: solid 3px var(--color-use--9);
+    outline-offset: -3px
+}
+
+.dsb-input-cell:has(input:not(input[type=checkbox])):has(input:not([disabled]):focus),.dsb-input-cell:has(input:not(input[type=checkbox])):has(input:not([disabled]):focus-visible),.dsb-input-cell:has(:not(input[type=radio])):has(input:not([disabled]):focus),.dsb-input-cell:has(:not(input[type=radio])):has(input:not([disabled]):focus-visible) {
+    outline-color: var(--color-use--9)
+}
+
+.dsb-input-cell:has(input:not(input[type=checkbox])):has(input[disabled]),.dsb-input-cell:has(:not(input[type=radio])):has(input[disabled]) {
+    outline-color: var(--color-grey--20);
+    cursor: not-allowed
+}
+
+.dsb-input-cell:has(input:not(input[type=checkbox])):has(input[readonly=readonly]),.dsb-input-cell:has(input:not(input[type=checkbox])):has(input[readonly=readonly]):hover,.dsb-input-cell:has(:not(input[type=radio])):has(input[readonly=readonly]),.dsb-input-cell:has(:not(input[type=radio])):has(input[readonly=readonly]):hover {
+    outline: none;
+    background-color: var(--color-grey--5)
+}
+
+.dsb-input-cell input:not(input[type=checkbox]):not(input[type=radio]) {
+    border-radius: 4px;
+    width: 100%;
+    color: #333;
+    font: normal 1.125rem "Source Sans Pro",sans-serif;
+    line-height: 1.75rem;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    z-index: 10
+}
+
+@media(max-width: 56.23em) {
+    .dsb-input-cell input:not(input[type=checkbox]):not(input[type=radio]) {
+        color:#333;
+        font: normal 1rem "Source Sans Pro",sans-serif;
+        line-height: 1.25rem
+    }
+}
+
+.dsb-input-cell input:not(input[type=checkbox]):not(input[type=radio]).dsb-input-text--basic-value {
+    text-align: right;
+    padding-right: .5rem
+}
+
+.dsb-input-cell input:focus-visible,.dsb-input-cell input[readonly] {
+    outline: none
+}

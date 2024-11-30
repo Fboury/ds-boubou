@@ -1,0 +1,18 @@
+.mcf-collapse__content {
+  border-bottom: 1px solid #EBEBEB;
+  -webkit-transition: max-height 0.35s;
+  -moz-transition: max-height 0.35s;
+  -ms-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.mcf-collapse__header[data-mcf-collapsed=true] ~ .mcf-collapse__content {
+  max-height: 1000vh;
+}
+
+.mcf-collapse__header[data-mcf-collapsed=false] ~ .mcf-collapse__content {
+  border-bottom: 0;
+}

@@ -1,0 +1,43 @@
+.formSwitcherRadio {
+    position: fixed;
+    top: -10000px;
+}
+
+.formSwitcherRadio:checked + label {
+    color: #fff;
+    background-color: #0073be;
+    border-color: #0073be;
+}
+
+.formSwitcherRadio:checked + label::before {
+    position: absolute;
+    display: block;
+    top: -12px;
+    right: -12px;
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    cursor: pointer;
+    content: "";
+    background-color: #00a073;
+    background-image: url('data:image/svg+xml;utf8,<svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path stroke="%23fff" stroke-width="3" d="M4 8.5L6.5 11l6-6" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    border: solid 2px #fff;
+    border-radius: 50%;
+}
+
+.mcfSwitcher {
+    position: relative;
+    margin: 0px 7px 14px 7px;
+}
+
+.mcfSwitcher:first-child {
+    margin: 0 7px 14px 0;
+}
+
+.mcfSwitcher:last-child {
+    margin: 0 0 14px 7px;
+}

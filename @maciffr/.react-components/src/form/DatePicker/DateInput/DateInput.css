@@ -1,0 +1,10 @@
+.date-input-number {
+  outline: none;
+  width: 100%;
+}
+
+.date-input-number::-webkit-outer-spin-button,
+.date-input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

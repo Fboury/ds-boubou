@@ -1,0 +1,29 @@
+{
+  "name": "@maciffr/storybook",
+  "version": "1.7.51",
+  "description": "Configuration de base de Storybook pour les projets Macif.fr",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.macif.fr:btoc-sites.libs.utils/fmw-react.git"
+  },
+  "keywords": [
+    "storybook",
+    "react"
+  ],
+  "type": "module",
+  "author": "Antoine Jouan",
+  "license": "ISC",
+  "peerDependencies": {
+    "@storybook/addon-a11y": "^7.4.6",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-interactions": "^7.4.6",
+    "@storybook/addon-links": "^7.4.6",
+    "@storybook/blocks": "^7.4.6",
+    "@storybook/builder-vite": "^7.4.6",
+    "@storybook/jest": "^0.2.3",
+    "@storybook/react": "^7.4.6",
+    "@storybook/react-vite": "^7.4.6",
+    "@storybook/testing-library": "^0.2.2",
+    "storybook": "^7.4.6"
+  }
+}

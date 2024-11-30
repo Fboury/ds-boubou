@@ -1,0 +1,10 @@
+.mds-collapse__content.active {
+    visibility: visible;
+}
+
+/**
+Override FWK-CSS
+ */
+.mds-show-more__btn:focus {
+    outline: none;
+}

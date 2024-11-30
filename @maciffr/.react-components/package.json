@@ -1,0 +1,89 @@
+{
+  "name": "@maciffr/react-components",
+  "version": "1.7.51",
+  "private": false,
+  "scripts": {
+    "clean-build": "rm -rf ./lib",
+    "clean-test": "rm -rf ./coverage",
+    "clean-dep": "rm -rf ./node_modules",
+    "clean": "npm run clean-build & npm run clean-test & npm run clean-dep",
+    "start": "npm run storybook",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/**/*.css lib/",
+    "test": "jest --runInBand",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test:coverage": "npm run test -- --coverage --ci --testResultsProcessor=\"jest-sonar-reporter\" --reporters=default --reporters=\"jest-junit\"",
+    "test:coverage:ci": "npm run test:coverage"
+  },
+  "storybook": {
+    "url": "http://storybook.tcd.macif.fr/react/components/@CURRENT_VERSION_PACKAGE@"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "**/src/**/*.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    }
+  },
+  "devDependencies": {
+    "@maciffr/react": "^1.7.51",
+    "@maciffr/storybook": "^1.7.51",
+    "copy-files": "^0.1.0",
+    "cross-env": "^7.0.3"
+  },
+  "exports": {
+    "./*": "./lib/*.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "lib/*"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "dependencies": {
+    "sass": "^1.62.0"
+  }
+}

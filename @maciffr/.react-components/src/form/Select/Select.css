@@ -1,0 +1,3 @@
+.input-select[aria-invalid="true"] ~ .invalid-feedback {
+    display: flex;
+}

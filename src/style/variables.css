@@ -1,0 +1,44 @@
+:root {
+    /* Couleurs */
+    --color-primary: #007bff;
+    --color-primary-hover: #0056b3;
+    --color-secondary: #6c757d;
+    --color-secondary-hover: #5a6268;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-grey--5: #F2F2F2;
+    --color-grey--10: #E5E5E5;
+    --color-grey--20: #CCCCCC;
+    --color-grey--30: #B2B2B2;
+    --color-grey--40: #999999;
+    --color-grey--50: #7F7F7F;
+    --color-grey--60: #666666;
+    --color-grey--70: #4D4D4D;
+    --color-grey--80: #333333;
+    --color-grey--90: #1A1A1A;
+    --color-use--1: #016F50;
+    --color-use--2: #EFFBF7;
+    --color-use--3: #0038BA;
+    --color-use--4: #ECF1FF;
+    --color-use--5: #D80C31;
+    --color-use--6: #FEECEF;
+    --color-use--7: #C73E00;
+    --color-use--8: #FFF1EB;
+    --color-use--9: #0066CC;
+    --color-use--10: #D62E52;
+    --color-macif--1: #0A2D82;
+    --color-macif--2: #D3D62E;
+
+    /* Espacements */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+
+    /* Bordures */
+    --border-radius: 4px;
+
+    /* Typographie */
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --font-weight-bold: 700;
+}

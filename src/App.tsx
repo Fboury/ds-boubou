@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Bouton from "./components/Bouton/Bouton";
 
-function App() {
+const App = () => {
+  const handleClick = () => {
+    alert("Bouton clicked!");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
+      <h1>React Vanilla Bouton</h1>
+
+      <h2>Primary Bouton</h2>
+      <Bouton variant="primary" onClick={handleClick}>
+        Primary
+      </Bouton>
+
+      <h2>Secondary Bouton</h2>
+      <Bouton variant="secondary" onClick={handleClick}>
+        Secondary
+      </Bouton>
+
+      <h2>Disabled Bouton</h2>
+      <Bouton variant="primary" disabled>
+        Disabled
+      </Bouton>
     </div>
   );
-}
+};
 
 export default App;

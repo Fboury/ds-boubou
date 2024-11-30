@@ -1,0 +1,34 @@
+.mds-pagination ul {
+    display: flex;
+}
+
+.mds-pagination ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.mds-pagination ul li:last-child {
+    padding-bottom: 1rem;
+}
+
+.mds-pagination li:first-child .mds-btn {
+    margin-left: 0;
+}
+
+.mds-pagination .mds-pagination-delimiter {
+    font-size: 1.4rem;
+    vertical-align: bottom;
+    margin-left: 0.5rem;
+    color: #0A2D82;
+}
+
+.mds-pagination .mds-btn {
+    margin-left: 0.5rem;
+}
+
+.mds-pagination .mds-btn.actif {
+    color: #fff;
+    background-color: #0A2D82;
+    border-color: #0A2D82;
+}
