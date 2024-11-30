@@ -1,27 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",                       // Version de JavaScript cible
+    "module": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",                    // Support JSX pour React
+    "declaration": true,                   // Génère des fichiers `.d.ts`
+    "declarationDir": "dist",              // Dossier de sortie des fichiers `.d.ts`
+    "emitDeclarationOnly": false,          // Génère aussi du code JS
+    "outDir": "dist",                      // Dossier de sortie
+    "strict": true,                        // Renforce les règles TypeScript
+    "esModuleInterop": true,               // Support pour ES Modules
+    "skipLibCheck": true,                  // Ignore les erreurs des types des dépendances
+    "moduleResolution": "node",            // Résolution de modules pour Node.js
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src",
-    ".storybook",
-  ]
+  "noFallthroughCasesInSwitch": true,
+  "module": "esnext",
+  "moduleResolution": "node",
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "noEmit": true,
+  "jsx": "react-jsx",
+  "include": ["src/**/*"],                 // Inclut tous les fichiers dans `src`
+  "exclude": ["node_modules", "dist"]      // Exclut ces dossiers
 }

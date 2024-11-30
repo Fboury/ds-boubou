@@ -1,7 +1,7 @@
 import "./Bouton.css";
 import { ReactNode, ButtonHTMLAttributes } from "react";
 
-interface BoutonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BoutonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: "primary" | "secondary";
   disabled?: boolean;
